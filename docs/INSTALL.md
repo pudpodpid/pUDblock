@@ -6,7 +6,17 @@ and a privacy page.
 
 ## Firefox
 
-Files:
+[**Install pUDblock 1.0.3 for Firefox**](https://addons.mozilla.org/firefox/downloads/file/5190980/4617884d274341eb859a-1.0.3.xpi)
+
+Open the link in Firefox and confirm **Add**. This Mozilla-signed version
+stays installed after Firefox restarts. If the file downloads instead, open
+`about:addons`, click the gear icon, choose **Install Add-on From File…**, and
+select the downloaded `.xpi`. Remove any temporary development copy first,
+then reload open Twitch live channels after installing or updating.
+
+### Temporary development installation
+
+Local build files:
 
 - `firefox/pudblock-1.0.3-firefox.zip` — source package for Mozilla submission or temporary testing.
 - `firefox/pudblock-1.0.3-unsigned.xpi` — the same extension in XPI format, explicitly unsigned.
@@ -30,11 +40,25 @@ are retained. That tab reload is needed to attach the new waiting/recovery scrip
 
 Version 1.0.3 keeps that same ID and moves Firefox's backup requests into the Twitch page context.
 Reload the extension and the Twitch tab once after updating so the new helper
-is installed. It requires a new Mozilla signature for permanent installation;
-the earlier signed 1.0.1 release is preserved separately. Submit this as a new
-version of the existing add-on, with the matching 1.0.3 source archive if requested.
+is installed. Use the signed download above for permanent installation.
+Future builds require their own Mozilla signature; the earlier signed 1.0.1
+release is preserved separately.
 
 ## Chrome
+
+The Chrome Web Store submission is **under review**. To install now:
+
+1. [Download the project ZIP](https://github.com/pudpodpid/pUDblock/archive/refs/heads/main.zip)
+   and extract it into a folder you intend to keep.
+2. Open `chrome://extensions` and enable **Developer mode**.
+3. Click **Load unpacked** and select the `chrome/` folder inside the extracted
+   project (`pUDblock-main/chrome`), which contains `manifest.json`.
+4. Open or reload a Twitch live channel.
+
+Keep the extracted project in the same location. To update, replace its files,
+click **Reload** on the extension card, and reload Twitch.
+
+### Local Chrome build package
 
 `chrome/pudblock-1.0.3-chrome.zip` is the Chrome Web Store upload package and
 can also be extracted for a local installation:
@@ -72,4 +96,6 @@ not support picture-in-picture or casting.
 
 Support/contact profile: https://github.com/pudpodpid
 
-The packages have not been published or signed by a store.
+The Firefox download above is Mozilla-signed. Locally generated Firefox build
+packages are unsigned. Chrome store installation will be available after review
+and publication; the Developer mode instructions work in the meantime.

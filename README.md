@@ -5,7 +5,41 @@
 A Twitch live-stream ad blocker for Firefox Desktop and Chrome, published by
 [pudpodpid](https://github.com/pudpodpid). Both builds have the same cat icon,
 popup, switches, status counters, privacy page and optional support link.
-The current development release is **1.0.3**.
+The current release is **1.0.3**.
+
+## Installation
+
+### Firefox
+
+[**Install pUDblock for Firefox — v1.0.3**](https://addons.mozilla.org/firefox/downloads/file/5190980/4617884d274341eb859a-1.0.3.xpi)
+
+Open the link in Firefox and confirm **Add** when prompted. This is the
+Mozilla-signed version and stays installed after Firefox restarts.
+
+If Firefox downloads the file instead, open `about:addons`, click the gear
+icon, choose **Install Add-on From File…**, and select the downloaded `.xpi`.
+Remove any temporary development copy before installing the signed version.
+After installing or updating, reload any open Twitch live channel.
+
+### Chrome
+
+The Chrome Web Store submission is **under review**. Install with Developer
+mode for now:
+
+1. [Download the project ZIP](https://github.com/pudpodpid/pUDblock/archive/refs/heads/main.zip)
+   and extract it into a folder you intend to keep.
+2. Open `chrome://extensions` in Chrome.
+3. Turn on **Developer mode**.
+4. Click **Load unpacked** and select the **`chrome` folder inside the extracted
+   project** (`pUDblock-main/chrome`), which contains `manifest.json`.
+5. Open or reload a Twitch live channel, then click the pUDblock cat icon.
+
+Keep the extracted project in the same location so Chrome can load the
+extension after restarting. To update, replace the files in that location,
+click **Reload** on pUDblock's card at `chrome://extensions`, and reload Twitch.
+
+For local Firefox development and package details, see
+[installation instructions](docs/INSTALL.md).
 
 ## Separate browser folders
 
@@ -30,46 +64,13 @@ Run `npm ci` and `npm run release` to create `releases/v1.0.3/`:
 | `SHA256SUMS.txt` | SHA-256 checksums for the release files |
 
 The release also includes installation instructions, privacy policy, changelog
-and draft store/reviewer notes. These are local packages; they have not been
-signed or published to either store. The publisher supplied a Mozilla-signed
-1.0.1 XPI, preserved separately under `releases/v1.0.1/firefox-signed/`.
-Version 1.0.3 needs its own Mozilla signature before permanent installation.
-See [installation](docs/INSTALL.md) and
-[release/signing instructions](RELEASING.md).
-
-## Try it in Firefox
-
-1. Open `about:debugging#/runtime/this-firefox` in Firefox.
-2. Click **Load Temporary Add-on…**.
-3. Select `firefox/manifest.json`, or the Firefox release ZIP.
-4. Open or reload a Twitch live channel. The toolbar popup shows the latest
-   result and lets you switch filtering or alternate streams on and off.
-
-Remove older development copies before loading v1.0.0. The final Firefox
-add-on ID is `pudblock@pudpodpid`, so this version starts with its own default
-switch settings. Future source changes can be loaded using **Reload** on the
-add-on in `about:debugging`. Then reload Twitch.
-
-Updating from 1.0.0 to 1.0.1 keeps the same add-on ID and saved switches. Reload
-the extension and the Twitch tab once so the new player scripts can attach.
-
-Temporary installation lasts until Firefox restarts. The packaged ZIP is
-unsigned; permanent installation in normal Firefox requires Mozilla signing.
-The earlier signed 1.0.1 build does not confer a signature on new builds. See Mozilla's
-[temporary installation](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/)
-and [signing instructions](https://extensionworkshop.com/documentation/publish/signing-and-distribution-overview/).
-
-## Try it in Chrome
-
-1. Open `chrome://extensions` in Chrome.
-2. Turn on **Developer mode**.
-3. Click **Load unpacked** and choose this project's `chrome/` folder.
-4. Open or reload a Twitch live channel, then open the pUDblock popup.
-
-If using the Chrome ZIP, extract it first and select the extracted folder that
-contains `manifest.json`. Chrome does not install this development ZIP directly.
-Use the reload button on the extension card after changing files, then reload
-Twitch. This build has not been published to the Chrome Web Store.
+and draft store/reviewer notes. Build outputs are unsigned; use the
+Mozilla-signed Firefox download in [Installation](#installation) for permanent
+installation. The Chrome Web Store submission is under review; use the
+Developer mode steps above until its store link is available. The earlier
+signed Firefox 1.0.1 XPI is preserved separately under
+`releases/v1.0.1/firefox-signed/`.
+See [release/signing instructions](RELEASING.md) for preparing future versions.
 
 ## Confirm activity
 
