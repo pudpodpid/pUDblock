@@ -11,10 +11,10 @@ The current release is **1.0.3**.
 
 ### Firefox
 
-[**Install pUDblock for Firefox — v1.0.3**](https://addons.mozilla.org/firefox/downloads/file/5190980/4617884d274341eb859a-1.0.3.xpi)
+[**Install pUDblock for Firefox — v1.0.3**](https://github.com/pudpodpid/pUDblock/releases/download/v1.0.3/pudblock-1.0.3-firefox-signed.xpi)
 
-Open the link in Firefox and confirm **Add** when prompted. This is the
-Mozilla-signed version and stays installed after Firefox restarts.
+Open the link in Firefox. If an installation prompt appears, confirm **Add**.
+This is the Mozilla-signed version and stays installed after Firefox restarts.
 
 If Firefox downloads the file instead, open `about:addons`, click the gear
 icon, choose **Install Add-on From File…**, and select the downloaded `.xpi`.

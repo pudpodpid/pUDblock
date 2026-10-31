@@ -6,10 +6,10 @@ and a privacy page.
 
 ## Firefox
 
-[**Install pUDblock 1.0.3 for Firefox**](https://addons.mozilla.org/firefox/downloads/file/5190980/4617884d274341eb859a-1.0.3.xpi)
+[**Install pUDblock 1.0.3 for Firefox**](https://github.com/pudpodpid/pUDblock/releases/download/v1.0.3/pudblock-1.0.3-firefox-signed.xpi)
 
-Open the link in Firefox and confirm **Add**. This Mozilla-signed version
-stays installed after Firefox restarts. If the file downloads instead, open
+Open the link in Firefox and confirm **Add** if an installation prompt appears.
+This Mozilla-signed version stays installed after Firefox restarts. If the file downloads instead, open
 `about:addons`, click the gear icon, choose **Install Add-on From File…**, and
 select the downloaded `.xpi`. Remove any temporary development copy first,
 then reload open Twitch live channels after installing or updating.
