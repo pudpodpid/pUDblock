@@ -1,0 +1,37 @@
+:root { color-scheme: dark; font: 13px/1.5 system-ui, sans-serif; background: #111b1c; color: #e6efec; }
+* { box-sizing: border-box; }
+body { width: 338px; margin: 0; }
+header { display: flex; gap: 12px; align-items: center; padding: 22px 22px 16px; }
+h1 { font-size: 20px; letter-spacing: -.6px; margin: 0; }
+p { margin: 0; color: #a5b9b4; }
+header p { font-size: 11px; }
+main { padding: 0 22px 18px; }
+.setting { display: flex; align-items: center; justify-content: space-between; gap: 14px; padding: 14px 0; font-weight: 600; cursor: pointer; }
+.secondary { border-top: 1px solid #29403c; padding-top: 12px; font-size: 12px; font-weight: 400; }
+input { appearance: none; width: 34px; height: 20px; border-radius: 12px; background: #435552; margin: 0; position: relative; cursor: pointer; flex-shrink: 0; }
+input::after { content: ""; position: absolute; width: 14px; height: 14px; border-radius: 50%; background: #edf6f2; top: 3px; left: 3px; transition: transform .12s; }
+input:checked { background: #38a884; }
+input:checked::after { transform: translateX(14px); }
+input:focus-visible, a:focus-visible, .counter:focus-visible { outline: 2px solid #9de5d0; outline-offset: 3px; }
+input:disabled { opacity: .45; cursor: default; }
+.status { display: flex; gap: 10px; background: #1b2b29; border: 1px solid #2c4640; border-radius: 12px; padding: 14px 12px; margin: 10px 0 18px; min-height: 78px; }
+.status p { font-size: 11px; margin-top: 4px; overflow-wrap: anywhere; }
+.dot { width: 8px; height: 8px; border-radius: 50%; background: #7d9690; flex-shrink: 0; margin-top: 6px; }
+.dot.active { background: #77e4be; }
+.dot.wait { background: #f0be6d; }
+.counts { position: relative; display: grid; grid-template-columns: 1fr 1fr 1fr; margin-bottom: 8px; gap: 12px; }
+.counts strong { display: block; font-size: 23px; font-variant-numeric: tabular-nums; }
+.counts span { color: #a5b9b4; font-size: 10px; }
+.counter { cursor: help; border-radius: 3px; }
+.counts .counter-tooltip { position: absolute; bottom: 100%; left: 0; right: 0; z-index: 1; padding: 8px 10px; border: 1px solid #416359; border-radius: 8px; background: #233c33; color: #e6efec; font-size: 11px; visibility: hidden; pointer-events: none; }
+.counter:is(:hover, :focus-visible):not(.tooltip-dismissed) .counter-tooltip { visibility: visible; pointer-events: auto; }
+.activity { font-size: 11px; margin-bottom: 12px; }
+.diagnostics { margin-bottom: 16px; font-size: 11px; color: #a5b9b4; }
+.diagnostics summary { cursor: pointer; }
+.diagnostics p { margin-top: 6px; }
+.support-link { display: block; margin-top: 10px; padding: 9px 10px; border-radius: 8px; background: #ffdd00; color: #202016; text-align: center; text-decoration: none; font-size: 12px; font-weight: 600; }
+.support-link:hover { background: #ffe84d; }
+.note { margin-top: 14px; font-size: 11px; }
+#error { margin-top: 10px; color: #ffb4b4; }
+footer { border-top: 1px solid #29403c; text-align: center; padding: 12px; font-size: 10px; color: #92aaa1; }
+footer a { color: #b5decf; text-underline-offset: 2px; }

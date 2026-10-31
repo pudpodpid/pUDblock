@@ -1,0 +1,49 @@
+{
+  "manifest_version": 2,
+  "name": "pUDblock",
+  "version": "1.0.3",
+  "description": "Local Twitch ad filtering. Clean backups first; ads hidden and muted when a clean stream is unavailable.",
+  "author": "pudpodpid",
+  "homepage_url": "https://github.com/pudpodpid",
+  "permissions": [
+    "storage",
+    "webRequest",
+    "webRequestBlocking",
+    "https://*.twitch.tv/*",
+    "https://*.ttvnw.net/*"
+  ],
+  "background": {
+    "scripts": ["core.js", "backup-transport.js", "background.js"],
+    "persistent": true
+  },
+  "content_scripts": [
+    { "matches": ["https://*.twitch.tv/*"], "js": ["core.js", "page-transport.js", "player-guard.js", "player-main.js"], "world": "MAIN", "run_at": "document_start", "all_frames": true },
+    { "matches": ["https://*.twitch.tv/*"], "js": ["player-content.js"], "run_at": "document_start", "all_frames": true }
+  ],
+  "browser_action": {
+    "default_title": "pUDblock",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/cat-16.png",
+      "32": "icons/cat-32.png",
+      "48": "icons/cat-48.png",
+      "64": "icons/cat-64.png"
+    }
+  },
+  "icons": {
+    "48": "icons/cat-48.png",
+    "96": "icons/cat-96.png",
+    "128": "icons/cat-128.png",
+    "256": "icons/cat-256.png"
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "pudblock@pudpodpid",
+      "strict_min_version": "140.0",
+      "data_collection_permissions": { "required": ["browsingActivity"] }
+    },
+    "gecko_android": {
+      "strict_min_version": "142.0"
+    }
+  }
+}

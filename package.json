@@ -1,0 +1,38 @@
+{
+  "name": "pudblock",
+  "version": "1.0.3",
+  "private": true,
+  "type": "module",
+  "description": "pUDblock Twitch live-stream filtering for Firefox and Chrome",
+  "license": "MIT",
+  "author": "pudpodpid",
+  "homepage": "https://github.com/pudpodpid",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "test": "node --test tests/*.test.js",
+    "sync": "node scripts/sync-chrome.mjs",
+    "lint": "npm run lint:firefox && npm run lint:chrome",
+    "lint:firefox": "web-ext lint --source-dir firefox --warnings-as-errors",
+    "lint:chrome": "node scripts/check-chrome.mjs",
+    "build": "npm run sync && npm run build:firefox && npm run build:chrome",
+    "build:firefox": "web-ext build --source-dir firefox --artifacts-dir dist/firefox --overwrite-dest",
+    "build:chrome": "web-ext build --source-dir chrome --artifacts-dir dist/chrome --overwrite-dest",
+    "release": "npm run sync && npm run check:release && npm test && npm run lint && npm run test:firefox && npm run test:chrome && npm run build && node scripts/package-release.mjs",
+    "check:release": "node scripts/check-release.mjs",
+    "sign:firefox": "node scripts/sign-firefox.mjs",
+    "start": "npm run start:firefox",
+    "start:firefox": "web-ext run --source-dir firefox",
+    "start:chrome": "web-ext run --source-dir chrome --target chromium",
+    "test:firefox": "node scripts/firefox-smoke.mjs && node scripts/firefox-backup-smoke.mjs",
+    "test:live": "node scripts/firefox-live-check.mjs",
+    "test:chrome": "node scripts/chrome-smoke.mjs",
+    "test:live:chrome": "node scripts/chrome-live-check.mjs"
+  },
+  "devDependencies": {
+    "jszip": "^3.10.2",
+    "puppeteer-core": "^25.16.0",
+    "web-ext": "^10.8.0"
+  }
+}

@@ -1,0 +1,9 @@
+node_modules/
+.reference/
+.test-artifacts/
+dist/
+releases/
+*.pem
+*.key
+.env
+.env.*

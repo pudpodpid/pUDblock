@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>pUDblock</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header><img src="icons/cat-96.png" width="42" height="42" alt=""><div><h1>pUDblock</h1><p>Local Twitch ad filtering</p></div></header>
+  <main>
+    <label class="setting"><span>Filter stream ads</span><input id="enabled" type="checkbox" role="switch"></label>
+    <label class="setting secondary"><span>Try clean alternate streams</span><input id="backups" type="checkbox" role="switch"></label>
+    <section class="status" aria-live="polite"><span id="dot" class="dot"></span><div><strong id="state">Loading…</strong><p id="detail">Checking this tab</p></div></section>
+    <div class="counts">
+      <div class="counter" tabindex="0" aria-describedby="checked-help"><strong id="checked">0</strong><span>Playlists checked</span><span id="checked-help" class="counter-tooltip" role="tooltip">Stream playlists checked for ads.</span></div>
+      <div class="counter" tabindex="0" aria-describedby="filtered-help"><strong id="filtered">0</strong><span>Hidden ad refreshes</span><span id="filtered-help" class="counter-tooltip" role="tooltip">Refreshes hidden and muted while no clean backup is available. Ad data may still download.</span></div>
+      <div class="counter" tabindex="0" aria-describedby="alternate-help"><strong id="alternate">0</strong><span>Clean backup refreshes</span><span id="alternate-help" class="counter-tooltip" role="tooltip">Refreshes using a clean alternate stream.</span></div>
+    </div>
+    <p id="last-check" class="activity">No playlists checked yet</p>
+    <details class="diagnostics"><summary>Connection details</summary><p id="diagnostics">No stream requests detected.</p><p id="backup-diagnostics" hidden></p></details>
+    <a id="support" class="support-link" href="https://buymeacoffee.com/pudpodpid" target="_blank" rel="noopener noreferrer">☕ Buy me a coffee</a>
+    <p class="note">If no clean backup is available, ads are hidden and muted until live content returns. Ad data may still download. Counts cover this tab's current channel in this browser session.</p>
+    <p id="error" role="alert" hidden></p>
+  </main>
+  <footer>No telemetry · <a id="privacy" href="privacy.html" target="_blank" rel="noopener noreferrer">Privacy</a> · <span id="version"></span></footer>
+  <script src="ui-state.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

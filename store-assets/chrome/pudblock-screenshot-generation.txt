@@ -1,0 +1,8 @@
+Tool: built-in image_gen, followed by a proportional PNG export at exactly 640 x 400 using System.Drawing.
+Input: the user-attached pUDblock popup screenshot.
+Output: pudblock-screenshot-640x400.png
+
+Additional upload exports: pudblock-screenshot-upload-640x400.jpg and pudblock-screenshot-upload-1280x800.jpg. Both use 24-bit RGB with no alpha channel, JPEG quality 95, and independently verified exact dimensions. Exported from the same image_gen source with proportional sizing.
+
+Prompt:
+Use case: compositing. Edit target: the most recent user-attached screenshot of the pUDblock browser extension popup (337 pixels wide and 448 pixels high). Task: produce an image exactly 640 pixels wide by 400 pixels high for a Chrome Web Store screenshot. Make a faithful mechanical resize-and-pad edit: retain the full rectangular screenshot without cropping, scale it down uniformly to fit its full height into the 400-pixel canvas, and horizontally center it. Fill the extra space on the left and right with a flat dark background matching the screenshot's dark green-black background. Keep the screenshot's original image pixels, precise original interface, cat image, switches, text, typography, numbers and colors unchanged except for uniform resizing. Do not redraw, rewrite, redesign, add content, invent details, add effects, shadows, borders, frames, text or promotional slogans. Preserve all existing screenshot text exactly, including pUDblock, Local Twitch ad filtering, Filter stream ads, Try clean alternate streams, Using a clean alternate, caedrel, 3912, 0, 133, Playlists checked, Hidden ad refreshes, Clean backup refreshes, Last checked 1s ago and Connection details. Output a landscape PNG with exact 640 by 400 pixel dimensions.

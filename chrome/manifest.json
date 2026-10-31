@@ -1,0 +1,44 @@
+{
+  "manifest_version": 3,
+  "name": "pUDblock",
+  "version": "1.0.3",
+  "description": "Local Twitch ad filtering. Clean backups first; ads hidden and muted when a clean stream is unavailable.",
+  "author": "pudpodpid",
+  "homepage_url": "https://github.com/pudpodpid",
+  "minimum_chrome_version": "120",
+  "permissions": ["storage", "webRequest"],
+  "host_permissions": ["https://*.twitch.tv/*", "https://*.ttvnw.net/*"],
+  "background": { "service_worker": "background.js" },
+  "action": {
+    "default_title": "pUDblock",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/cat-16.png",
+      "32": "icons/cat-32.png",
+      "48": "icons/cat-48.png",
+      "64": "icons/cat-64.png"
+    }
+  },
+  "icons": {
+    "48": "icons/cat-48.png",
+    "96": "icons/cat-96.png",
+    "128": "icons/cat-128.png",
+    "256": "icons/cat-256.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*.twitch.tv/*"],
+      "js": ["bridge.js"],
+      "run_at": "document_start",
+      "all_frames": true,
+      "world": "ISOLATED"
+    },
+    {
+      "matches": ["https://*.twitch.tv/*"],
+      "js": ["core.js", "stream-runtime.js", "player-guard.js", "page-hook.js"],
+      "run_at": "document_start",
+      "all_frames": true,
+      "world": "MAIN"
+    }
+  ]
+}
