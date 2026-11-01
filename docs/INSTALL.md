@@ -46,7 +46,18 @@ release is preserved separately.
 
 ## Chrome
 
-The Chrome Web Store submission is **under review**. To install now:
+[**Install pUDblock for Chrome**](https://chromewebstore.google.com/detail/pudblock/jbklilapclblienckckaidplcbjhpife)
+
+1. Open the store page in Chrome and click **Add to Chrome**.
+2. Confirm **Add extension**.
+3. Open or reload a Twitch live channel, then click the pUDblock cat icon.
+
+If you previously installed an unpacked development copy, remove that copy
+from `chrome://extensions` before installing the store version.
+
+### Developer installation (unpacked)
+
+To load the source locally for development:
 
 1. [Download the project ZIP](https://github.com/pudpodpid/pUDblock/archive/refs/heads/main.zip)
    and extract it into a folder you intend to keep.
@@ -69,9 +80,9 @@ can also be extracted for a local installation:
 4. Open or reload a Twitch live channel.
 
 If you have this source project, select its `chrome/` folder directly.
-For ordinary one-click installation, use the Chrome Web Store listing once
-published. The ZIP is not a directly installable CRX. Removing or moving the
-unpacked folder can break a developer installation.
+For normal installation, use the Chrome Web Store link above. The ZIP is not
+a directly installable CRX. Removing or moving the unpacked folder can break
+a developer installation.
 
 ## Confirm it is active
 
@@ -97,5 +108,5 @@ not support picture-in-picture or casting.
 Support/contact profile: https://github.com/pudpodpid
 
 The Firefox download above is Mozilla-signed. Locally generated Firefox build
-packages are unsigned. Chrome store installation will be available after review
-and publication; the Developer mode instructions work in the meantime.
+packages are unsigned. Chrome is available from the Chrome Web Store link above;
+the Developer mode instructions are for local source installations.

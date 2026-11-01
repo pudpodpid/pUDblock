@@ -23,22 +23,18 @@ After installing or updating, reload any open Twitch live channel.
 
 ### Chrome
 
-The Chrome Web Store submission is **under review**. Install with Developer
-mode for now:
+[**Install pUDblock for Chrome**](https://chromewebstore.google.com/detail/pudblock/jbklilapclblienckckaidplcbjhpife)
 
-1. [Download the project ZIP](https://github.com/pudpodpid/pUDblock/archive/refs/heads/main.zip)
-   and extract it into a folder you intend to keep.
-2. Open `chrome://extensions` in Chrome.
-3. Turn on **Developer mode**.
-4. Click **Load unpacked** and select the **`chrome` folder inside the extracted
-   project** (`pUDblock-main/chrome`), which contains `manifest.json`.
-5. Open or reload a Twitch live channel, then click the pUDblock cat icon.
+Open the store page in Chrome, click **Add to Chrome**, and confirm
+**Add extension**. Open or reload a Twitch live channel, then click the
+pUDblock cat icon.
 
-Keep the extracted project in the same location so Chrome can load the
-extension after restarting. To update, replace the files in that location,
-click **Reload** on pUDblock's card at `chrome://extensions`, and reload Twitch.
+If you previously installed an unpacked development copy, remove that copy
+from `chrome://extensions` before installing the store version.
 
-For local Firefox development and package details, see
+For local development using **Developer mode**, see
+[unpacked installation](docs/INSTALL.md#developer-installation-unpacked).
+For Firefox development and package details, see
 [installation instructions](docs/INSTALL.md).
 
 ## Separate browser folders
@@ -66,8 +62,7 @@ Run `npm ci` and `npm run release` to create `releases/v1.0.3/`:
 The release also includes installation instructions, privacy policy, changelog
 and draft store/reviewer notes. Build outputs are unsigned; use the
 Mozilla-signed Firefox download in [Installation](#installation) for permanent
-installation. The Chrome Web Store submission is under review; use the
-Developer mode steps above until its store link is available. The earlier
+installation. Chrome is available from the Chrome Web Store link above. The earlier
 signed Firefox 1.0.1 XPI is preserved separately under
 `releases/v1.0.1/firefox-signed/`.
 See [release/signing instructions](RELEASING.md) for preparing future versions.
