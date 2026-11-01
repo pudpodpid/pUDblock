@@ -3,8 +3,7 @@
 <img src="firefox/icons/cat-128.png" width="96" height="96" alt="pUDblock cat">
 
 A Twitch live-stream ad blocker for Firefox Desktop and Chrome, published by
-[pudpodpid](https://github.com/pudpodpid). Both builds have the same cat icon,
-popup, switches, status counters, privacy page and optional support link.
+[pudpodpid](https://github.com/pudpodpid). Both builds have the same popup, switches, status counters, privacy page and optional support link.
 The current release is **1.0.3**.
 
 ## Installation
@@ -249,9 +248,7 @@ Third-party portions retain their original MIT copyright and permission
 notices in the source and distributed extension. See
 [the third-party notices](firefox/NOTICE.md) and bundled licenses in each browser
 folder.
-The cat artwork was supplied by pudpodpid, who generated it with ChatGPT using
-their own cat as the subject. This project is independent of Twitch, Mozilla
-and Google.
+This project is independent of Twitch, Mozilla and Google.
 
 ## Support
 
