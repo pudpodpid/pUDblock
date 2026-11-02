@@ -152,11 +152,11 @@ control. Turning filtering off immediately restores video and sound.
   fetches. Page-context requests still substitute clean video in page/classic/
   Blob-worker playlists, omit cookies/authorization, and avoid recursive
   filtering. Genuine token-server rejections retain the hidden/muted fallback.
-- A separate live Chrome check on xQc processed eight clean playlists with video
+- A separate live Chrome check processed eight clean playlists with video
   playing and no reported player error. Earlier Firefox live checks also confirmed
   stream detection. **Ad suppression during a live Twitch ad break and sustained
   playback through repeated breaks have not been verified.**
-- An anonymous backup comparison on Caedrel found a compatible clean 1920x1080
+- An anonymous backup comparison found a compatible clean 1920x1080
   60 fps H.264 popout backup in both Firefox's extension background and Chrome's
   Twitch page. This demonstrates backup capability in both transports; it does
   not identify the cause of an earlier, user-reported Firefox fallback.
